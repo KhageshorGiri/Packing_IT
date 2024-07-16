@@ -1,11 +1,13 @@
-﻿namespace PackingIT.Domain.Entities;
+﻿using PackingIT.Domain.ValueObjects;
+
+namespace PackingIT.Domain.Entities;
 
 public  class PackingItem
 {
     public Guid Id { get; set; }
 
-    private string? _name;
-    private string? _localization;
+    private PackingItem _name;
+    private Localization _localization;
 
 
     public readonly LinkedList<PackingItem> _items = new();
