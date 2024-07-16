@@ -2,17 +2,17 @@
 
 namespace PackingIT.Domain.Entities;
 
-public  class PackingItem
+public  class PackingList
 {
     public Guid Id { get; set; }
 
-    private PackingItem _name;
+    private PackingList _name;
     private Localization _localization;
 
 
-    public readonly LinkedList<PackingItem> _items = new();
+    public readonly LinkedList<PackingList> _items = new();
 
-    public void AddItem(PackingItem item)
+    public void AddItem(PackingList item)
     {
         _items.AddLast(item);
     }
