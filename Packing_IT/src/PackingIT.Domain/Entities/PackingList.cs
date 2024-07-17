@@ -7,7 +7,7 @@ public  class PackingList : AggregateRoot<PackingListId>
 {
     public PackingListId Id { get; set; }
 
-    private PackingList _name;
+    private PackingItemName _name;
     private Localization _localization;
 
 
