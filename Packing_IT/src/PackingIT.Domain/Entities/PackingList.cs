@@ -1,10 +1,11 @@
 ﻿using PackingIT.Domain.ValueObjects;
+using PackingIT.Shared.Abstraction.Domain;
 
 namespace PackingIT.Domain.Entities;
 
-public  class PackingList
+public  class PackingList : AggregateRoot<PackingListId>
 {
-    public Guid Id { get; set; }
+    public PackingListId Id { get; set; }
 
     private PackingList _name;
     private Localization _localization;

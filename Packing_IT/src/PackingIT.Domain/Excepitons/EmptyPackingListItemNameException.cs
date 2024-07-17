@@ -4,5 +4,5 @@ namespace PackingIT.Domain.Excepitons;
 
 public class EmptyPackingListItemNameException : PackingITException
 {
-    public EmptyPackingListItemNameException(string message) : base("Packing item can not be empty.") { }
+    public EmptyPackingListItemNameException() : base("Packing item can not be empty.") { }
 }
