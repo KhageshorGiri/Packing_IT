@@ -1,4 +1,5 @@
-﻿using PackingIT.Domain.ValueObjects;
+﻿using PackingIT.Domain.Excepitons;
+using PackingIT.Domain.ValueObjects;
 using PackingIT.Shared.Abstraction.Domain;
 
 namespace PackingIT.Domain.Entities;
@@ -11,10 +12,15 @@ public  class PackingList : AggregateRoot<PackingListId>
     private Localization _localization;
 
 
-    public readonly LinkedList<PackingList> _items = new();
+    public readonly LinkedList<PackingItem> _items = new();
 
-    public void AddItem(PackingList item)
+    public void AddItem(PackingItem item)
     {
+        var exectedItem = _items.Any(itm => itm.Name == item.Name);
+
+        if (exectedItem)
+            throw new PackingItemAlreadyExistsException(_name, item.Name);
+
         _items.AddLast(item);
     }
 }
