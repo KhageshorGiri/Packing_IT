@@ -1,6 +1,7 @@
 ﻿using PackingIT.Domain.Excepitons;
 using PackingIT.Domain.ValueObjects;
 using PackingIT.Shared.Abstraction.Domain;
+using System.ComponentModel;
 
 namespace PackingIT.Domain.Entities;
 
@@ -22,5 +23,7 @@ public  class PackingList : AggregateRoot<PackingListId>
             throw new PackingItemAlreadyExistsException(_name, item.Name);
 
         _items.AddLast(item);
+
+        AddingNewEventArgs()
     }
 }
