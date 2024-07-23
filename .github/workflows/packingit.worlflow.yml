@@ -26,4 +26,4 @@ jobs:
       run: dotnet build Packing_IT/src/PackingIT.API/PackingIT.API.csproj --configuration Release --no-restore
 
     - name: Run tests 📝
-      run: dotnet test Packing_IT/test/PackingIT.Test/PackingIT.Test.csproj --no-build 
+      run: dotnet test Packing_IT/test/PackingIT.Test/PackingIT.Test.csproj --configuration Release --no-build 
