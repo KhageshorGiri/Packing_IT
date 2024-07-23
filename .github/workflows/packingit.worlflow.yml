@@ -23,7 +23,7 @@ jobs:
       run: dotnet restore Packing_IT/src/PackingIT.API/PackingIT.API.csproj
 
     - name: Build Application 🚀
-      run: dotnet build Packing_IT/src/PackingIT.API/PackingIT.API.csproj --configuration Release --no-restore
+      run: dotnet build Packing_IT/src/PackingIT.API/PackingIT.API.csproj -c Release --no-restore
 
     - name: Run automated tests 📝
-      run: dotnet test Packing_IT/test/PackingIT.Test/PackingIT.Test.csproj --configuration Release --no-build 
+      run: dotnet test test/PackingIT.Test/PackingIT.Test.csproj -c Release 
