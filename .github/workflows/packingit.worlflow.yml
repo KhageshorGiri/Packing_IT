@@ -11,19 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - name: Checkout code 🛎️
+      uses: actions/checkout@v4
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v2
+    - name: Setup .NET Core 🔧
+      uses: ctions/setup-dotnet@v4
       with:
         dotnet-version: '8.x' # Adjust the version as needed
 
-    - name: Restore dependencies
+    - name: Restore dependencies 🛠️
       run: dotnet restore Packing_IT/src/PackingIT.API/PackingIT.API.csproj
 
-    - name: Build
-      run: dotnet build Packing_IT/src/PackingIT.API/PackingIT.API.csproj --configuration Release --no-restore
+    - name: Build 🚀
+      run: dotnet build Packing_IT/src/PackingIT.API/PackingIT.API.csproj --c Release --no-restore
 
-    - name: Run tests
-      run: dotnet test Packing_IT/test/PackingIT.Test/PackingIT.Test.csproj  --verbosity normal
+    - name: Run tests 📝
+      run: dotnet test Packing_IT/test/PackingIT.Test/PackingIT.Test.csproj --no-build 
