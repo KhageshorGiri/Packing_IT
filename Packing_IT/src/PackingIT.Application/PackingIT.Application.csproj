@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PackingIT.Domain\PackingIT.Domain.csproj" />
+    <ProjectReference Include="..\shared\PackingIT.Shared\PackingIT.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
