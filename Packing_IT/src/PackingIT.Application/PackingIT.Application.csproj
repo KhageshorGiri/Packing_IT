@@ -11,8 +11,4 @@
     <ProjectReference Include="..\shared\PackingIT.Shared\PackingIT.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
-
 </Project>
