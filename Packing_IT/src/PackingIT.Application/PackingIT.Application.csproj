@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Handlers\" />
     <Folder Include="DTO\" />
-    <Folder Include="Exceptions\" />
   </ItemGroup>
 
 </Project>

@@ -2,4 +2,4 @@
 
 namespace PackingIT.Application.Commands;
 
-public record AddPackingItem(Guid PackingListId, string Name, decimal Quantity) : ICommand;
+public record AddPackingItem(Guid PackingListId, string Name, uint Quantity) : ICommand;

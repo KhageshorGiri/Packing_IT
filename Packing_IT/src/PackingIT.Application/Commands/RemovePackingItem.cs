@@ -2,4 +2,4 @@
 
 namespace PackingIT.Application.Commands;
 
-public record RemovePackingItem(Guid PackinglistId, string Name) : ICommand;
+public record RemovePackingItem(Guid PackingListId, string Name) : ICommand;
