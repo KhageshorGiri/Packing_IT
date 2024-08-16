@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PackingIT.Application.DTO;
+using PackingIT.Shared.Abstraction.Queries;
 
-namespace PackingIT.Application.Queries.Handlers
+namespace PackingIT.Application.Queries;
+
+public class GetPackingListHandler : IQueryHandler<GetPackingList, PackingListDto>
 {
-    internal class GetPackingListHandler
+    public Task<PackingListDto> HandleAsync(GetPackingList query)
     {
+        throw new NotImplementedException();
     }
 }

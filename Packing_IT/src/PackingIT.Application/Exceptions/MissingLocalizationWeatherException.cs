@@ -1,7 +1,7 @@
 ﻿using PackingIT.Domain.ValueObjects;
 using PackingIT.Shared.Abstraction.Exceptions;
 
-namespace PackingIT.Application.DTO.External;
+namespace PackingIT.Application.Exceptions;
 
 public class MissingLocalizationWeatherException : PackingITException
 {
